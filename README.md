@@ -43,6 +43,7 @@ verifyPassword()-Функция для проверки соответствия
 
 
 Для связи с БД MySQL установить  mysql-connector-c++-8.0.33-win32.msi 
+
 база данных для root установить пароль password
 после уставновки выполнить 
 mysql -h localhost -u root -p
