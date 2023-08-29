@@ -41,6 +41,46 @@ verifyPassword()-Функция для проверки соответствия
 
 Для OC Windows реализована цветовая поддержка консоли
 
+
+Для связи с БД MySQL установить  mysql-connector-c++-8.0.33-win32.msi
+база данных для root установить пароль password
+после уставновки выполнить 
+mysql -h localhost -u root -p
+
+mysql>create database chatdb;
+mysql>use chatdb;
+
+После создания базы данных выполнить скрипты:
+CREATE TABLE `table_users` (
+  `id` int NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'Create Time',
+  `name` varchar(255) NOT NULL,
+  `login` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+)
+
+CREATE TABLE `table_messages` (
+  `id` int NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'Create Time',
+  `letter` varchar(255) DEFAULT NULL,
+  `sender_id` int NOT NULL,
+  `recepient_id` int DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `sender_ind` (`sender_id`),
+  KEY `recepient_ind` (`recepient_id`),
+  CONSTRAINT `table_messages_ibfk_1` FOREIGN KEY (`sender_id`) REFERENCES `table_users` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `table_messages_ibfk_2` FOREIGN KEY (`recepient_id`) REFERENCES `table_users` (`id`) ON DELETE CASCADE
+)
+
+Server компилировать в RELEASE X32 (не Debug, под ним в windows c mysqlconnector баг)
+
+Настройка Microsoft Visual Studio:
+Project->Properties->C/C++->General->Additional Include Directories: D:\libraries\mysql8.0.33-32\include\jdbc;%(AdditionalIncludeDirectories)
+Project->Properties->C/C++->Preprocessor->Preprocessor Definitions: STATIC_CONCPP;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)
+Project->Properties->Linker->General->Additional Library Directories: D:\libraries\mysql8.0.33-32\lib\vs14;%(AdditionalLibraryDirectories)
+Project->Properties->Linker->Input->Additional Dependencies: mysqlcppconn-static.lib;%(AdditionalDependencies)
+
 Используется протокол TCP и архитектура клиент-сервер.
 
 класс NetWorkStream: экземпляр класса используется вместо стандартных объектов std::cin и std::cout
