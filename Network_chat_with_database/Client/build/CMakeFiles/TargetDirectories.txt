@@ -1,0 +1,3 @@
+/home/nikita/projects/Network_chat_with_database/Client/build/CMakeFiles/Client.dir
+/home/nikita/projects/Network_chat_with_database/Client/build/CMakeFiles/edit_cache.dir
+/home/nikita/projects/Network_chat_with_database/Client/build/CMakeFiles/rebuild_cache.dir

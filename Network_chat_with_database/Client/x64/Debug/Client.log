@@ -1,0 +1,3 @@
+﻿  main.cpp
+D:\CPP Projects\Repositories\Network_chat_with_database\Network_chat_with_database\Client\main.cpp(35,36): warning C4244: '=': conversion from 'SOCKET' to 'int', possible loss of data
+  Client.vcxproj -> D:\CPP Projects\Repositories\Network_chat_with_database\Network_chat_with_database\Client\x64\Debug\Client.exe

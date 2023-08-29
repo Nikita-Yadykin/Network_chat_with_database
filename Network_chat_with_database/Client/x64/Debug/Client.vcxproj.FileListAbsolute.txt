@@ -1,0 +1,4 @@
+C:\Users\jadyk\Desktop\Client\x64\Debug\Client.exe
+C:\Users\jadyk\Desktop\Network_chat_with_database\Client\x64\Debug\Client.exe
+D:\ubuntu_tmp\Test_crosplatformChat\Network_chat_with_database\Client\x64\Debug\Client.exe
+D:\CPP Projects\Repositories\Network_chat_with_database\Network_chat_with_database\Client\x64\Debug\Client.exe

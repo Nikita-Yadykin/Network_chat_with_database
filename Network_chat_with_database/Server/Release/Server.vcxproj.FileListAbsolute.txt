@@ -1,0 +1,4 @@
+D:\ServerChat\Server\Release\Server.exe
+C:\Users\jadyk\Desktop\Network_chat_with_database\Server\Release\Server.exe
+D:\ubuntu_tmp\Test_crosplatformChat\Network_chat_with_database\Server\Release\Server.exe
+D:\CPP Projects\Repositories\Network_chat_with_database\Network_chat_with_database\Server\Release\Server.exe
